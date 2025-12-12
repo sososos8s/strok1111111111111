@@ -1,0 +1,5 @@
+{
+  "name": "Stroke Prediction System",
+  "description": "A medical interface for predicting stroke risk based on patient demographic, clinical, and lifestyle factors using AI.",
+  "requestFramePermissions": []
+}

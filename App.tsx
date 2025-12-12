@@ -104,9 +104,9 @@ const App: React.FC = () => {
   };
 
   const getInputClass = (field: keyof PatientData) => {
-    const baseClass = "w-full rounded-lg border p-2.5 text-slate-700 outline-none transition focus:ring-2 focus:ring-teal-500";
+    const baseClass = "w-full rounded-lg border p-2.5 text-slate-700 outline-none transition focus:ring-2 focus:ring-teal-500 bg-white";
     return validationErrors[field] 
-      ? `${baseClass} border-red-500 focus:border-red-500 focus:ring-red-200 bg-red-50`
+      ? `${baseClass} border-red-500 focus:border-red-500 focus:ring-red-200`
       : `${baseClass} border-slate-300 focus:border-teal-500`;
   };
 
@@ -139,7 +139,7 @@ const App: React.FC = () => {
               <div>
                 <label className="block text-sm font-medium text-slate-700 mb-1">Gender</label>
                 <select 
-                  className="w-full rounded-lg border-slate-300 border p-2.5 text-slate-700 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none transition"
+                  className="w-full rounded-lg border-slate-300 border p-2.5 text-slate-700 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none transition bg-white"
                   value={formData.gender}
                   onChange={(e) => handleInputChange('gender', e.target.value)}
                 >
@@ -174,7 +174,7 @@ const App: React.FC = () => {
               <div>
                 <label className="block text-sm font-medium text-slate-700 mb-1">Work Type</label>
                 <select 
-                  className="w-full rounded-lg border-slate-300 border p-2.5 text-slate-700 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none transition"
+                  className="w-full rounded-lg border-slate-300 border p-2.5 text-slate-700 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none transition bg-white"
                   value={formData.workType}
                   onChange={(e) => handleInputChange('workType', e.target.value)}
                 >
@@ -184,7 +184,7 @@ const App: React.FC = () => {
               <div>
                 <label className="block text-sm font-medium text-slate-700 mb-1">Residence Type</label>
                 <select 
-                  className="w-full rounded-lg border-slate-300 border p-2.5 text-slate-700 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none transition"
+                  className="w-full rounded-lg border-slate-300 border p-2.5 text-slate-700 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none transition bg-white"
                   value={formData.residenceType}
                   onChange={(e) => handleInputChange('residenceType', e.target.value)}
                 >
@@ -194,7 +194,7 @@ const App: React.FC = () => {
               <div>
                 <label className="block text-sm font-medium text-slate-700 mb-1">Ever Married</label>
                 <select 
-                  className="w-full rounded-lg border-slate-300 border p-2.5 text-slate-700 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none transition"
+                  className="w-full rounded-lg border-slate-300 border p-2.5 text-slate-700 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none transition bg-white"
                   value={formData.everMarried ? 'Yes' : 'No'}
                   onChange={(e) => handleInputChange('everMarried', e.target.value === 'Yes')}
                 >
@@ -274,7 +274,7 @@ const App: React.FC = () => {
             <div>
               <label className="block text-sm font-medium text-slate-700 mb-1">Smoking Status</label>
               <select 
-                className="w-full rounded-lg border-slate-300 border p-2.5 text-slate-700 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none transition"
+                className="w-full rounded-lg border-slate-300 border p-2.5 text-slate-700 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none transition bg-white"
                 value={formData.smokingStatus}
                 onChange={(e) => handleInputChange('smokingStatus', e.target.value)}
               >
@@ -315,7 +315,7 @@ const App: React.FC = () => {
             
             {/* Placeholder state if no result */}
             {!result && !loading && (
-              <div className="bg-slate-100 rounded-xl p-8 text-center h-full min-h-[300px] flex flex-col items-center justify-center border-2 border-dashed border-slate-300">
+              <div className="bg-white rounded-xl p-8 text-center h-full min-h-[300px] flex flex-col items-center justify-center border-2 border-dashed border-slate-300">
                 <Activity className="w-16 h-16 text-slate-300 mb-4" />
                 <h3 className="text-slate-500 font-semibold text-lg">No Prediction Yet</h3>
                 <p className="text-slate-400 text-sm mt-2">Enter patient details and run the model to see the risk assessment.</p>
